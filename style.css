@@ -1,0 +1,217 @@
+
+/* usecases of css positions */
+
+/* 
+  sticky
+  fixed
+  sticky
+  absolute
+  relative
+*/
+
+body {
+    /* by default the browser has margin: 3px */
+    margin: 0;
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.logo {
+    height: 50px;
+}
+
+.nav {
+    width: 1160px;
+    margin: auto;
+    padding: 16px 0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: fixed;  causes alignment problems although looks similar to "sticky" */
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.btn {
+    background-color: white;
+    padding: 16px 30px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 1px solid lightgrey;
+  
+}
+
+.card {
+    width: 250px;
+    border: 1px solid lightgray;
+    padding: 8px;
+    border-radius: 14px;
+}
+
+.card-image {
+    width: 100%;
+    border-radius: 14px;
+}
+
+.container {
+    display: flex;
+    gap: 16px;
+    margin-top: 40px;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+.food-card {
+    width: 300px;
+    padding: 10px;
+    margin: 30px auto;
+    border: 1px solid lightgrey;
+    border-radius: 14px;
+}
+
+.title {
+    margin: 6px 0;
+}
+
+.desc {
+    margin: 4px 0;
+    font-size: 15px;
+    color: gray;
+}
+
+.card-header {
+    position: relative;
+}
+.best {
+    background-color: orangered;
+    position: absolute;
+    top: 0;
+    margin: 7px;
+    color: white;
+    font-size: 14px;
+    padding: 2px 12px;
+    border-radius: 12px;
+}
+
+.ratings {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 7px;
+    background-color: blueviolet;
+    padding: 2px 12px;
+    border-radius: 12px;
+    color: white;
+    font-size: 14px;
+
+}
+
+.bg {
+    width: 100vw;
+    height: 100vh;
+    /* position: relative; */
+}
+
+.bg-img {
+    width: 100%;
+    /* height: 100vh; */
+    height: 100%;
+    /* Objec-fit  we change "Size" of the image without changing "Aspect-Ratio" of the image. */
+    /* object-fit: cover; */
+}
+
+.shade {
+    /* background-color: rgba(0, 0, 0, 0.512); */
+    /* background-image: linear-gradient(to top, rgba(255, 0, 0, 0.53), rgba(255, 255, 0, 0.429), rgba(0, 128, 0, 0.443)); */
+    
+    /* Taken from https://cssgradient.io/ */
+    /* background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0.6715686274509804) 8%, rgba(9,9,121,0.7163865546218487) 51%, rgba(0,212,255,0.7303921568627452) 90%);    
+    */
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0.5455182072829132) 8%, rgba(9,9,121,0.542717086834734) 51%, rgba(0,212,255,0.5371148459383753) 90%);
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+}
+
+.content{
+
+    width: 1100px;
+
+    position: absolute;
+    bottom: 600px;
+    color: white;
+   
+
+    /* When we have text inside a "position: absolute" element,
+    this below code is the only way to center the text inside of it.
+    Nothing works apart from this  i.e. margins, justify-content, align-items as positon:absolute
+    brings the element one-level up. */
+    text-align: center;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.bg-title {
+    font-size:50px;
+    font-weight: 900;
+}
+
+.bg-sub-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 25px;
+}
+
+.bg-sub-text {
+    font-size: 23px;
+    font-weight: 550;
+    margin-top: 25px;
+}
+
+
+
+.email-input {
+    width: 40%;
+    margin: 10px;
+    display:inline-block;
+    padding: 18px 8px;
+    font-size: 20px;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.452);
+    color: white;
+    border: 1px solid red;
+}
+
+.get-started-button{
+    width: 20%;
+    /* display: inline-block; */
+    background-color: red;
+    margin: 10px;
+    padding: 18px 8px;
+    border-radius: 6px;
+    color: white;
+    font-size: 26px;
+    border: none;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.chevron-icon {
+    display: inline-block;   
+   height: 1.5rem; 
+ }
+
+.get-started {
+    display: inline-block;
+
+}
+
